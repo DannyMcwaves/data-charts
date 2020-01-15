@@ -1,4 +1,5 @@
 import { app, BrowserWindow } from 'electron';
+import { windowDefaults } from './config';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -19,7 +20,7 @@ const createWindow = async () => {
         await installExtensions();
     }
 
-    win = new BrowserWindow({ width: 800, height: 600 });
+    win = new BrowserWindow(windowDefaults);
 
     if (process.env.NODE_ENV !== 'production') {
         process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1';
