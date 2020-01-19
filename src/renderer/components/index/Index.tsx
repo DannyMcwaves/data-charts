@@ -34,6 +34,11 @@ class Index extends React.Component {
                         <img alt="logo" src={webcamPng} />
                     </Link>
                 </div>
+                <div className="link">
+                    <Link to="/bar"> Bar </Link> <br/>
+                    <Link to="/pie"> Pie </Link> <br/>
+                    <Link to="/line"> Line </Link> <br/>
+                </div>
             </div>
         );
     }
