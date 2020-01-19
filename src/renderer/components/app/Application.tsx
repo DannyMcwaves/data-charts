@@ -7,18 +7,28 @@ import './Application.scss';
 
 import Index from '../index/Index';
 import FourOhFour from '../404/404';
+import BarChart from '../bar-chart/BarChart';
+import PieChart from '../pie-chart/PieChart';
+import LineChart from '../line-chart/LineChart';
 
 const Application = () => (
     <div id="app" className="row">
         <Router>
             <Switch>
                 <Route exact={true} path="/">
-                    {' '}
-                    <Index />{' '}
+                    <Index />
+                </Route>
+                <Route path="/bar">
+                    <BarChart />
+                </Route>
+                <Route path="/pie">
+                    <PieChart />
+                </Route>
+                <Route path="/line">
+                    <LineChart />
                 </Route>
                 <Route path="*">
-                    {' '}
-                    <FourOhFour />{' '}
+                    <FourOhFour />
                 </Route>
             </Switch>
         </Router>
